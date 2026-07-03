@@ -1,0 +1,13 @@
+{
+  "cSpell.words": [
+    "farfaraway",
+    "overworld",
+    "Respawn"
+  ],
+  "files.associations": {
+    "LICENSE": "text"
+  },
+  "yaml.schemas": {
+    "https://www.schemastore.org/paper-plugin.json": "src/main/resources/plugin.yml"
+  }
+}
