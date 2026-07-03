@@ -1,0 +1,5 @@
+name: FarFarAway
+version: '${project.version}'
+main: ar.com.utoctadel.farfaraway.FarFarAway
+api-version: '1.21'
+description: "Spawns players in a random location far from spawn"

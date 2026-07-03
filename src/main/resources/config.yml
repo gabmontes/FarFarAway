@@ -1,0 +1,5 @@
+# Minimum distance from world origin (0,0) in blocks
+min-distance: 1000
+
+# Maximum distance from world origin (0,0) in blocks
+max-distance: 10000
