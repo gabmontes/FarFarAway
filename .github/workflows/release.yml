@@ -18,7 +18,9 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "21"
-      - run: mvn clean package
+      - run: mvn clean package -Drevision=${TAG#v}
+        env:
+          TAG: ${{ github.event.release.tag_name }}
       - run: |
           gh release upload "${{ github.event.release.tag_name }}" target/*.jar --clobber
         env:
