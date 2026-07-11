@@ -47,15 +47,15 @@ public class SpawnListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerRespawn(PlayerRespawnEvent event) {
-        if (!event.isBedSpawn() && !event.isAnchorSpawn()) {
-            World overworld = event.getPlayer().getServer().getWorlds().getFirst();
-            if (overworld.isHardcore()) {
-                Location deathLoc = deathLocations.remove(event.getPlayer().getUniqueId());
-                if (deathLoc != null) {
-                    event.setRespawnLocation(deathLoc);
-                }
-                return;
+        World overworld = event.getPlayer().getServer().getWorlds().getFirst();
+        if (overworld.isHardcore()) {
+            Location deathLoc = deathLocations.remove(event.getPlayer().getUniqueId());
+            if (deathLoc != null) {
+                event.setRespawnLocation(deathLoc);
             }
+            return;
+        }
+        if (!event.isBedSpawn() && !event.isAnchorSpawn()) {
             Location spawn = findSafeLocation(overworld);
             event.setRespawnLocation(spawn);
         }
