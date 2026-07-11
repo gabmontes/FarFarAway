@@ -36,3 +36,7 @@ mvn clean package
 ```
 
 The compiled JAR will be located in the `target/` directory.
+
+## Release
+
+Tag the commit, push the tag, create a new release and publish it. The `jar` will be build and uploaded to the release asserts automatically.
